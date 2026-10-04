@@ -1,0 +1,49 @@
+:root { --ink: #20262e; --line: #c5cbd3; --blue: #1769df; }
+.stApp { background: #fff; color: var(--ink); }
+.stMainBlockContainer { max-width: 1500px; padding: 4.7rem 3rem 2rem; }
+.app-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); padding: 0 0 1.4rem; margin-bottom: 2.3rem; }
+.app-header h1 { font-size: clamp(1.7rem, 3vw, 2.65rem); font-weight: 650; letter-spacing: -.025em; padding: 0; margin: 0; color: var(--ink); }
+.app-header span { font-size: 1.2rem; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.6rem)!important; color: var(--ink); margin: 0 0 1.2rem!important; font-weight: 650!important; }
+.center-title, .center-copy { text-align: center; }
+.center-copy, .page-description { font-size: 1.2rem; line-height: 1.6; }
+.page-description { color: #536071; margin-bottom: 2rem; }
+.st-key-narrow_form { max-width: 530px; margin: 1.4rem auto 1.7rem; }
+.st-key-narrow_form [data-testid="stTextInput"] { margin-bottom: 1rem; }
+[data-testid="stWidgetLabel"] p { font-size: 1.05rem; font-weight: 500; }
+[data-testid="stTextInput"] input { font-size: 1.1rem; min-height: 46px; caret-color: var(--blue); }
+[data-testid="stTextInputRootElement"] { border: 1px solid #a9b2bf; border-radius: 4px; background: #fff; }
+[data-testid="stButton"] button, [data-testid="stFormSubmitButton"] button { min-height: 45px; border-radius: 4px; padding: .55rem 1.25rem; box-shadow: none; }
+button[kind="primary"], button[kind="primaryFormSubmit"] { background: var(--blue); border-color: var(--blue); color: white; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.st-key-narrow_form [data-testid="stElementContainer"]:has(> [data-testid="stButton"]),
+.st-key-narrow_form [data-testid="stElementContainer"]:has(> [data-testid="stFormSubmitButton"]),
+.st-key-collection_result [data-testid="stElementContainer"]:has(> [data-testid="stButton"]),
+.st-key-center_back [data-testid="stElementContainer"]:has(> [data-testid="stButton"]) { margin-inline: auto; }
+[data-testid="stButton"] button p, [data-testid="stFormSubmitButton"] button p { font-size: 1.05rem; }
+.st-key-narrow_form [data-testid="stFormSubmitButton"], .st-key-narrow_form > div > [data-testid="stButton"], .st-key-collection_result [data-testid="stButton"], .st-key-center_back [data-testid="stButton"] { text-align: center; }
+.st-key-registration_result { max-width: 650px; margin: .6rem auto 1.3rem; }
+.st-key-registration_result p { font-size: 1.12rem; }
+.st-key-collection_result { margin: 1rem auto; }
+.st-key-center_back { margin: 1.5rem auto; text-align: center; }
+.simulation-note { text-align: center; color: #536071; font-size: .95rem; margin-top: .5rem; }
+.table-scroll { overflow-x: auto; margin: 1rem 0 1.4rem; }
+.parcel-table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 1.08rem; }
+.parcel-table th, .parcel-table td { border: 1px solid var(--line); padding: 15px 18px; text-align: left; overflow-wrap: anywhere; max-width: 350px; }
+.parcel-table th { background: #eceef1; font-weight: 600; }
+.locker-summary { font-size: 1.35rem; margin: 0 0 2rem; }
+.locker-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: .6rem 0 3rem; }
+.locker { border: 1px solid #929aa5; min-height: 140px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .35rem; padding: 1rem; }
+.locker strong { font-size: 1.3rem; }.locker span { font-size: 1.2rem; }.locker.occupied { background: #e9eaec; }
+.app-footer { text-align: right; color: #536071; font-size: .85rem; margin-top: 3rem; padding-top: 1rem; }
+[data-testid="stSidebar"] { background: #f5f6f8; border-right: 1px solid #e1e4e8; }
+::selection { background: #dbeafe; color: #142b4a; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media(max-width: 700px) {
+ .stMainBlockContainer { padding: 4.7rem 1rem 1.4rem; }
+ .app-header { align-items: flex-start; margin-bottom: 1.5rem; }
+ .app-header span { font-size: .9rem; padding-top: .4rem; }
+ .locker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+ .locker { min-height: 115px; }.locker-summary { font-size: 1.05rem; }
+ .st-key-narrow_form { max-width: 100%; }
+}
